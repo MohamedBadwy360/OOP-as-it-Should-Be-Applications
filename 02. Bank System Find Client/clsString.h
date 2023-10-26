@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class ClsString
+class clsString
 {
 private:
 
@@ -15,12 +15,12 @@ private:
 
 public:
 
-	ClsString()
+	clsString()
 	{
 		_value = "";
 	}
 
-	ClsString(string value)
+	clsString(string value)
 	{
 		_value = value;
 	}
@@ -325,29 +325,36 @@ public:
 		return CountWordsInString(_value);
 	}
 
-	static vector<string> Split(string sentence, string delim = " ")
+	static vector<string> Split(string S1, string Delim)
 	{
-		vector <string> words;
+
+		vector<string> vString;
+
 		short pos = 0;
-		string word;
+		string sWord; // define a string variable  
 
-		while ((pos = sentence.find(delim)) != std::string::npos)
+		// use find() function to get the position of the delimiters  
+		while ((pos = S1.find(Delim)) != std::string::npos)
 		{
-			word = sentence.substr(0, pos);
+			sWord = S1.substr(0, pos); // store the word   
+			// if (sWord != "")
+			// {
+			vString.push_back(sWord);
+			//}
 
-			if (word != "")
-				words.push_back(word);
-
-			sentence.erase(0, pos + delim.length());
+			S1.erase(0, pos + Delim.length());  /* erase() until positon and move to next word. */
 		}
 
-		if (sentence != "")
-			words.push_back(sentence);
+		if (S1 != "")
+		{
+			vString.push_back(S1); // it adds last word of the string.
+		}
 
-		return words;
+		return vString;
+
 	}
 
-	vector<string> Split(string delim = " ")
+	vector<string> Split(string delim)
 	{
 		return Split(_value, delim);
 	}
