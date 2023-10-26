@@ -98,7 +98,7 @@ private:
 
 		vClients = _LoadClientsDataFromFile();
 
-		for (clsBankClient C : vClients)
+		for (clsBankClient& C : vClients)
 		{
 			if (C.AccountNumber() == AccountNumber())
 			{
