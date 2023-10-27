@@ -205,11 +205,6 @@ public:
     }
     __declspec(property(get = GetAccountBalance, put = SetAccountBalance)) float AccountBalance;
 
-    string FullName()
-    {
-        return FirstName + " " + LastName;
-    }
-
     /*void Print()
     {
         cout << "\nClient Card:";
