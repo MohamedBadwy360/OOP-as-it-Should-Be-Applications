@@ -6,8 +6,9 @@ using namespace std;
 
 int main()
 {
-    //clsMainScreen::ShowMainMenue();
-    clsLoginScreen::ShowLoginScreen();
-
-    system("pause>0");
+    while(true)
+    {
+        if (!clsLoginScreen::ShowLoginScreen())
+            break;
+    }
 }

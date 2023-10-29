@@ -1,5 +1,3 @@
-
-
 #pragma once
 #include <iostream>
 #include <string>
@@ -216,7 +214,7 @@ public:
 
     }
 
-    static string  EncryptText(string Text, short EncryptionKey)
+    static string  EncryptText(string Text, short EncryptionKey = 2)
     {
 
         for (int i = 0; i <= Text.length(); i++)
@@ -230,7 +228,7 @@ public:
 
     }
 
-    static string  DecryptText(string Text, short EncryptionKey)
+    static string  DecryptText(string Text, short EncryptionKey = 2)
     {
 
         for (int i = 0; i <= Text.length(); i++)
@@ -305,8 +303,6 @@ public:
         {
             return   NumberToText(Number / 1000000000) + "Billions " + NumberToText(Number % 1000000000);
         }
-
-
     }
 
 };
