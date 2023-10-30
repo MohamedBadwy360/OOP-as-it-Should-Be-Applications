@@ -9,3 +9,9 @@ The Course is about OOP applications.
 ---
 
 **Tools:** `Visual Studio`, `Visual Studio Code`.
+
+---
+
+## `Certificate`
+
+![Cetificate](/11%20-%20OOP%20as%20it%20Should%20Be%20(Applications).jpg)
